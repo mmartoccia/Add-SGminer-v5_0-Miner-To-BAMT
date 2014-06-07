@@ -1,7 +1,7 @@
-Add-SGminer-X11X13Mod-Miner-To-BAMT
+Add-Multi Algo SGminer_v5-Miner-To-BAMT
 ========================
 
-This is script will install an optimised x11 and x13 algorithm miner within BAMT 1.6.0
+This is script will install sgminer V5 for multi-algorithm support within BAMT 1.6.0
 
 #Minable Coins
 
@@ -58,5 +58,5 @@ Then review your bamt.conf and your sgminer-x11mod.conf and sgminer-x13mod.conf
 "gpu-threads" : "2"
 
 #Donate
-
+credits to https://github.com/benmagro
 BTC: 1GeA7ZeKV5yH68EkMQCLb2ygm9K4qotT2x
