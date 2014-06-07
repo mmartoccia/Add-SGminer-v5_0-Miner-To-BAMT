@@ -20,7 +20,7 @@ This is script will install sgminer V5 for multi-algorithm support within BAMT 1
 #Instructions
 
 ```bash
-git clone https://github.com/benmagro/Add-SGminer-X11X13Mod-Miner-To-BAMT.git
+git clone https://github.com/mmartoccia/Add-SGminer-X11X13Mod-Miner-To-BAMT.git
 cd Add-SGminer-X11X13Mod-Miner-To-BAMT/
 ./x11x13.sh
 ```
