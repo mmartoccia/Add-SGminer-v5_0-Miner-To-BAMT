@@ -4,9 +4,9 @@ sleep 5
 cp x11.patch /tmp/
 cp x13.patch /tmp/
 cd /opt/miners/
-git clone https://github.com/lasybear/sph-sgminer_x11mod.git sgminer-x11X13mod
-cd /opt/miners/sgminer-x11X13mod
-cp /opt/miners/sgminer-4.1.0-sph/ADL_SDK/* /opt/miners/sgminer-x11X13mod/ADL_SDK/
+git clone https://github.com/sgminer-dev/sgminer.git sgminer-v5_0
+cd /opt/miners/sgminer-v5_0
+cp /opt/miners/sgminer-4.1.0-sph/ADL_SDK/* /opt/miners/sgminer-v5_0/ADL_SDK/
 make clean
 sleep 5
 chmod +x autogen.sh
@@ -27,12 +27,12 @@ patch /etc/bamt/bamt.conf <<.
 124a127
 >   # Sgminer X11 Mod "DRK" and X13 Mod "BOST"
 129a133
->   miner-sgminer-x11X13mod: 1
+>   miner-sgminer-v5_0: 1
 .
 patch /opt/bamt/common.pl <<.
 1477a1478,1480
->       } elsif (\${\$conf}{'settings'}{'miner-sgminer-x11X13mod'}) {
->         \$cmd = "cd /opt/miners/sgminer-x11X13mod/;/usr/bin/screen -d -m -S sgminer-x11X13 /opt/miners/sgminer-x11X13mod/sgminer \$args";
+>       } elsif (\${\$conf}{'settings'}{'miner-sgminer-v5_0'}) {
+>         \$cmd = "cd /opt/miners/sgminer-v5_0/;/usr/bin/screen -d -m -S sgminer-v5_0 /opt/miners/sgminer-v5_0/sgminer \$args";
 >         \$miner = "sgminer-x11X13";
 .
 cd /etc/bamt/
