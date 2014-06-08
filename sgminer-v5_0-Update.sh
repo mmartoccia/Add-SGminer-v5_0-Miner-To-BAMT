@@ -17,15 +17,13 @@ sleep 5
 make install
 sleep 5
 clear
-cp example.conf /etc/bamt/sgminer-x11mod.conf
-cp example.conf /etc/bamt/sgminer-x13mod.conf
+cp example.conf /etc/bamt/sgminer-v5_0.conf
 cd /etc/bamt/
 patch /etc/bamt/bamt.conf <<.
-116a117,118
->   cgminer_opts: --api-listen --config /etc/bamt/sgminer-x11mod.conf
->   cgminer_opts: --api-listen --config /etc/bamt/sgminer-x13mod.conf
+116a117
+>   cgminer_opts: --api-listen --config /etc/bamt/sgminer-v5_0.conf
 124a127
->   # Sgminer X11 Mod "DRK" and X13 Mod "BOST"
+>   # Sgminer v5_0
 129a133
 >   miner-sgminer-v5_0: 1
 .
@@ -36,14 +34,6 @@ patch /opt/bamt/common.pl <<.
 >         \$miner = "sgminer-v5_0";
 .
 cd /etc/bamt/
-mv /tmp/x11.patch /etc/bamt/
-mv /tmp/x13.patch /etc/bamt/
-cd /etc/bamt/
-patch /etc/bamt/sgminer-x11mod.conf < x11.patch
-patch /etc/bamt/sgminer-x13mod.conf < x13.patch
-rm x11.patch
-rm x13.patch
 echo 'sgminer v5_0 Miner Installed.'
 echo 'Please review your /etc/bamt/bamt.conf to enable.'
-echo 'Configure /etc/bamt/sgminer-x11mod.conf with pool'
-echo 'Configure /etc/bamt/sgminer-x13mod.conf with pool'
+echo 'Configure /etc/bamt/sgminer-v5_0.conf with pool'
