@@ -33,7 +33,7 @@ patch /opt/bamt/common.pl <<.
 1477a1478,1480
 >       } elsif (\${\$conf}{'settings'}{'miner-sgminer-v5_0'}) {
 >         \$cmd = "cd /opt/miners/sgminer-v5_0/;/usr/bin/screen -d -m -S sgminer-v5_0 /opt/miners/sgminer-v5_0/sgminer \$args";
->         \$miner = "sgminer-x11X13";
+>         \$miner = "sgminer-v5_0";
 .
 cd /etc/bamt/
 mv /tmp/x11.patch /etc/bamt/
@@ -43,7 +43,7 @@ patch /etc/bamt/sgminer-x11mod.conf < x11.patch
 patch /etc/bamt/sgminer-x13mod.conf < x13.patch
 rm x11.patch
 rm x13.patch
-echo 'X11 X13 Mod Miner Installed.'
+echo 'sgminer v5_0 Miner Installed.'
 echo 'Please review your /etc/bamt/bamt.conf to enable.'
 echo 'Configure /etc/bamt/sgminer-x11mod.conf with pool'
 echo 'Configure /etc/bamt/sgminer-x13mod.conf with pool'
